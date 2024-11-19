@@ -8,7 +8,7 @@ public class Main {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					Ventana ventana = new Ventana();
+					Frame ventana = new Frame();
 					ventana.frame.setVisible(true);
 					ventana.timer.start();
 				} catch (Exception e) {

@@ -11,25 +11,37 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
 import java.awt.BorderLayout;
+import javax.swing.JPanel;
+import java.awt.FlowLayout;
 
-public class Ventana {
+public class Frame {
 	Timer timer;
 
 	public JFrame frame;
 
-	public Ventana() {
+	public Frame() {
 		initialize();
 	}
 	public void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
+		frame.setBounds(0, 0, 2000, 1080);
 
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); 
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(829, 939, 314, 44);
+		frame.getContentPane().add(panel);
+		panel.setLayout(null);
+		
 		JProgressBar barraCarga = new JProgressBar();
-		frame.getContentPane().add(barraCarga, BorderLayout.SOUTH);
-		barraCarga.setStringPainted(true);
+		barraCarga.setBounds(0, 0, 314, 44);
 		barraCarga.setValue(0);
+		barraCarga.setStringPainted(true);
 		barraCarga.setMaximum(6);
+		panel.add(barraCarga);
 		timer = new Timer(1000, new ActionListener() {
 			int i = barraCarga.getMaximum();
 			@Override
@@ -41,7 +53,6 @@ public class Ventana {
 				}
 				barraCarga.addChangeListener(new ChangeListener() {
 					public void stateChanged(ChangeEvent e) {
-
 					}
 				});
 			}
