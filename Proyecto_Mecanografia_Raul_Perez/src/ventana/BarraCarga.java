@@ -5,7 +5,7 @@ import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class BarraCarga {
+public class BarraCarga extends JProgressBar {
     private JProgressBar progressBar;
     private Timer timer;
 

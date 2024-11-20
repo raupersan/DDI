@@ -22,6 +22,7 @@ public class Frame {
 	public JFrame frame;
 	public Timer timer;
 	private BarraCarga bc;
+
 	public Frame() {
 		initialize();
 	}
@@ -38,12 +39,10 @@ public class Frame {
 		panel.setBounds(829, 939, 314, 44);
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
-
-		JProgressBar progressBar = new JProgressBar();
-		progressBar.setBounds(0, 0, 314, 44);
-		panel.add(progressBar);
-
+		
 		bc = new BarraCarga(new JProgressBar());
+		bc.setBounds(0, 0, 314, 44);
+		panel.add(bc);
 		bc.start();
 	}
 }
