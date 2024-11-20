@@ -21,7 +21,7 @@ import java.awt.FlowLayout;
 public class Frame {
 	public JFrame frame;
 	public Timer timer;
-
+	private BarraCarga bc;
 	public Frame() {
 		initialize();
 	}
@@ -40,24 +40,10 @@ public class Frame {
 		panel.setLayout(null);
 
 		JProgressBar progressBar = new JProgressBar();
-		progressBar.setStringPainted(true);
 		progressBar.setBounds(0, 0, 314, 44);
 		panel.add(progressBar);
-		progressBar.setValue(0);
-		progressBar.setMaximum(6);
-		timer = new Timer(1000, new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				progressBar.setValue(progressBar.getValue() + 1);
-				if (progressBar.getValue() == progressBar.getMaximum()) {
-					BufferedImage imagen = null;
-					timer.stop();
-				}
-				progressBar.addChangeListener(new ChangeListener() {
-					public void stateChanged(ChangeEvent e) {
-					}
-				});
-			}
-		});
+
+		bc = new BarraCarga(new JProgressBar());
+		bc.start();
 	}
 }

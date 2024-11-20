@@ -10,7 +10,7 @@ public class Main {
 				try {
 					Frame ventana = new Frame();
 					ventana.frame.setVisible(true);
-					ventana.timer.start();
+					ventana.initialize();
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
