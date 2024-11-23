@@ -35,14 +35,23 @@ public class Frame {
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		JPanel panel = new JPanel();
-		panel.setBounds(829, 939, 314, 44);
-		frame.getContentPane().add(panel);
-		panel.setLayout(null);
-		
-		bc = new BarraCarga(new JProgressBar());
+		JPanel pantallaCarga = new JPanel();
+		pantallaCarga.setVisible(true);
+		pantallaCarga.setBounds(829, 939, 314, 44);
+		frame.getContentPane().add(pantallaCarga);
+		pantallaCarga.setLayout(null);
+		bc = new BarraCarga(new JProgressBar(),0,100,false);
 		bc.setBounds(0, 0, 314, 44);
-		panel.add(bc);
-		bc.start();
+		pantallaCarga.add(bc);
+	    bc.setStringPainted(true);
+	    bc.start();
+		JPanel login = new JPanel();
+		login.setBounds(0, 0, 434, 261);
+		login.setVisible(true);
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(login);
+		login.setLayout(null);
+		
+		
 	}
 }

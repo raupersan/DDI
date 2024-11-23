@@ -6,36 +6,56 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class BarraCarga extends JProgressBar {
-    private JProgressBar progressBar;
-    private Timer timer;
+	private JProgressBar progressBar;
+	private Timer timer;
+	private int valInicial;
+	private int valFinal;
+	private boolean cargado;
 
-    public BarraCarga(JProgressBar progressBar) {
-        this.progressBar = progressBar;
-        this.progressBar.setStringPainted(true);
-        this.progressBar.setValue(0);
-        this.progressBar.setMaximum(6);
+	public int getValInicial() {
+		return valInicial;
+	}
 
-        timer = new Timer(1000, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                incrementar();
-            }
-        });
-    }
+	public int getValFinal() {
+		return valFinal;
+	}
 
-    public void start() {
-        timer.start();
-    }
+	public boolean isCargado() {
+		return cargado;
+	}
 
-    public void stop() {
-        timer.stop();
-    }
+	public void setCargado(boolean cargado) {
+		this.cargado = cargado;
+	}
 
-    private void incrementar() {
-        progressBar.setValue(progressBar.getValue() + 1);
-        if (progressBar.getValue() == progressBar.getMaximum()) {
-            stop();
-            System.out.println("Progress completed!");
-        }
-    }
+	public BarraCarga(JProgressBar progressBar, int valInicial, int valFinal, boolean cargado) {
+		this.progressBar = progressBar;
+		this.valInicial = valInicial;
+		this.valFinal = valFinal;
+		this.cargado = cargado;
+		timer = new Timer(1000, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				incrementar();
+			}
+		});
+	}
+
+	@Override
+	public int getMaximum() {
+		return this.valFinal;
+	}
+
+	public void start() {
+		timer.start();
+	}
+
+	private void incrementar() {
+		this.setValue(this.getValue() + 16);
+		if (this.getValue() == this.getValFinal()) {
+			timer.stop();
+			this.setCargado(true);
+			System.out.println("Progress completed!");
+		}
+	}
 }
