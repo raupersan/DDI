@@ -25,7 +25,7 @@ public class BarraCarga extends JPanel {
 		panel.setLayout(null);
 		
 		JProgressBar barraCarga = new JProgressBar();
-		barraCarga.setBounds(753, 942, 437, 66);
+		barraCarga.setBounds(793, 942, 437, 66);
 		barraCarga.setValue(0);
 		barraCarga.setStringPainted(true);
 		barraCarga.setAlignmentY(1.0f);
@@ -34,7 +34,7 @@ public class BarraCarga extends JPanel {
 		
 		JLabel titulo = new JLabel("MECANOGRAFIA");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		titulo.setBounds(753, 162, 504, 335);
+		titulo.setBounds(925, 162, 504, 335);
 		panel.add(titulo);
 		new Timer(1000, new ActionListener() {
 			@Override

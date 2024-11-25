@@ -25,7 +25,7 @@ public class BarraCarga extends JPanel {
 		panel.setLayout(null);
 		
 		JProgressBar barraCarga = new JProgressBar();
-		barraCarga.setBounds(753, 942, 437, 66);
+		barraCarga.setBounds(793, 942, 437, 66);
 		barraCarga.setValue(0);
 		barraCarga.setStringPainted(true);
 		barraCarga.setAlignmentY(1.0f);

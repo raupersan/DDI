@@ -28,23 +28,23 @@ public class Login extends JPanel {
 		
 		JLabel titulo = new JLabel("Inicio de sesión");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 76));
-		titulo.setBounds(714, 107, 831, 206);
+		titulo.setBounds(400, 53, 831, 206);
 		panel.add(titulo);
 		
 		campoUser = new JTextField();
-		campoUser.setBounds(926, 670, 449, 66);
+		campoUser.setBounds(872, 668, 235, 66);
 		panel.add(campoUser);
 		campoUser.setColumns(10);
 		
 		campoContra = new JTextField();
-		campoContra.setBounds(926, 853, 449, 66);
+		campoContra.setBounds(872, 858, 235, 72);
 		panel.add(campoContra);
 		campoContra.setColumns(10);
 		
-		JLabel contrasena = new JLabel("Contraseña");
-		contrasena.setFont(new Font("Tahoma", Font.PLAIN, 50));
-		contrasena.setBounds(322, 853, 302, 78);
-		panel.add(contrasena);
+		JLabel lblNewLabel = new JLabel("Contraseña");
+		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 50));
+		lblNewLabel.setBounds(322, 853, 302, 78);
+		panel.add(lblNewLabel);
 
 	}
 }

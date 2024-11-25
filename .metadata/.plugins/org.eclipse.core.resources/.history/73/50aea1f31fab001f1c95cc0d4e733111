@@ -37,7 +37,7 @@ public class Login extends JPanel {
 		campoUser.setColumns(10);
 		
 		campoContra = new JTextField();
-		campoContra.setBounds(926, 853, 449, 66);
+		campoContra.setBounds(937, 853, 449, 66);
 		panel.add(campoContra);
 		campoContra.setColumns(10);
 		

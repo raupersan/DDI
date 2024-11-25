@@ -22,13 +22,12 @@ public class Frame extends JPanel {
 	private static CardLayout cl = new CardLayout();
 	private BarraCarga bc;
 	public static JPanel contenedor = new JPanel();
-	private Login login;
+
 	private JPanel pantallaLogin = new JPanel();
 	private final JButton iniciarSesion = new JButton("Iniciar Sesión");
 
 	public Frame() {
 		bc = new BarraCarga();
-		login = new Login();
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
@@ -38,7 +37,6 @@ public class Frame extends JPanel {
 		frame.getContentPane().add(contenedor);
 		contenedor.setLayout(cl);
 		contenedor.add(bc, "barraCarga");
-		contenedor.add(login, "login");
 		cl.show(contenedor, "barraCarga");
 
 	}

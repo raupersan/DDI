@@ -1,0 +1,26 @@
+package ventana;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JLabel;
+
+public class Login extends JPanel {
+	private JPanel panel;
+
+	public Login() {
+		setBounds(0,0,1920,1080);
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1920, 1080);
+		setLayout(null);
+		add(panel);
+		panel.setLayout(null);
+		
+		JLabel usuario = new JLabel("Usuario");
+		usuario.setBounds(0, 0, 46, 14);
+		panel.add(usuario);
+
+	}
+
+}
