@@ -1,0 +1,33 @@
+package ventana;
+
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
+
+public class BarraCarga extends JPanel {
+	private JProgressBar barraCarga;
+	private JPanel panel;
+	public BarraCarga() {
+		panel = new JPanel();
+		add(panel);
+		panel.setLayout(new FlowLayout(FlowLayout.BOTTOM, 5, 5));
+		barraCarga = new JProgressBar();
+		barraCarga.setStringPainted(true);
+		barraCarga.setBounds(600, 941, 727, 57);
+		panel.add(barraCarga);
+		barraCarga.setValue(0);
+		new Timer(1000, new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				barraCarga.setValue(barraCarga.getValue() + 16);
+				if (barraCarga.getValue() == 100) {
+					((Timer) e.getSource()).stop();
+					//Frame.show(Frame.contenedor, "2");
+				}
+			}
+		}).start();
+	}
+}

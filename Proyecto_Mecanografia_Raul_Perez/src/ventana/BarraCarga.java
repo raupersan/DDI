@@ -5,23 +5,38 @@ import javax.swing.JProgressBar;
 import javax.swing.Timer;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.FlowLayout;
+import java.awt.Toolkit;
+import java.awt.Component;
+import java.awt.Dimension;
+import java.awt.BorderLayout;
+import java.awt.Color;
 
 public class BarraCarga extends JPanel {
-	private JProgressBar progressBar;
+	private JPanel panel;
+	public BarraCarga() {
+		setBounds(0,0,1920,1080);
+		panel = new JPanel();
+		panel.setBackground(Color.WHITE);
+		panel.setBounds(0, 0, 1920, 1080);
 
-	public BarraCarga(JPanel panel) {
 		setLayout(null);
-
-		JProgressBar pb =new JProgressBar();
-		pb.setBounds(169, 244, 146, 17);
-		pb.setStringPainted(true);
-		add(pb);
+		add(panel);
+		panel.setLayout(null);
+		
+		JProgressBar barraCarga = new JProgressBar();
+		barraCarga.setBounds(793, 942, 437, 66);
+		barraCarga.setValue(0);
+		barraCarga.setStringPainted(true);
+		barraCarga.setAlignmentY(1.0f);
+		panel.add(barraCarga);
 		new Timer(1000, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (1 == 1) {
+				barraCarga.setValue(barraCarga.getValue() + 16);
+				if (barraCarga.getValue() == 100) {
 					((Timer) e.getSource()).stop();
-					System.out.println("Progress completed!");
+					Frame.cambiarVentana("2");
 				}
 			}
 		}).start();
