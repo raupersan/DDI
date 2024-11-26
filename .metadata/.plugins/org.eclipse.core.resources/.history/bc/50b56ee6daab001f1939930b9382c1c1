@@ -1,0 +1,21 @@
+package ventana;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+public class Juego extends JPanel{
+
+	private JPanel panel;
+
+	public Juego() {
+		setBounds(0,0,1920,1080);
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1920, 1080);
+		setLayout(null);
+		add(panel);
+		panel.setLayout(null);
+	}
+
+}

@@ -1,0 +1,18 @@
+package ventana;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class Dificultad extends JPanel{
+	public Dificultad() {
+		setBounds(0, 0, 1920, 1080);
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1920, 1080);
+		setLayout(null);
+		add(panel);
+		panel.setLayout(null);
+	}
+	private JPanel panel;
+	private JTextField campoUser;
+	private JTextField campoContra;
+}

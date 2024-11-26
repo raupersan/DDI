@@ -1,0 +1,62 @@
+package ventana;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JTextPane;
+import javax.swing.JTable;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+
+public class Juego extends JPanel{
+
+	private JPanel panel;
+
+	public Juego() {
+		setBounds(0,0,1920,1080);
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1920, 615);
+		setLayout(null);
+		add(panel);
+		panel.setLayout(null);
+		
+		JTextPane textPane = new JTextPane();
+		textPane.setBounds(0, 0, 1920, 615);
+		panel.add(textPane);
+		
+		JPanel panel_1 = new JPanel();
+		panel_1.setBounds(0, 614, 1920, 467);
+		panel.add(panel_1);
+		GridBagLayout gbl_panel_1 = new GridBagLayout();
+		gbl_panel_1.columnWidths = new int[]{0, 0};
+		gbl_panel_1.rowHeights = new int[]{0, 0, 0, 0};
+		gbl_panel_1.columnWeights = new double[]{0.0, Double.MIN_VALUE};
+		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, Double.MIN_VALUE};
+		panel_1.setLayout(gbl_panel_1);
+		
+		JButton btnNewButton = new JButton("New button");
+		GridBagConstraints gbc_btnNewButton = new GridBagConstraints();
+		gbc_btnNewButton.insets = new Insets(0, 0, 5, 0);
+		gbc_btnNewButton.gridx = 0;
+		gbc_btnNewButton.gridy = 0;
+		panel_1.add(btnNewButton, gbc_btnNewButton);
+		
+		JButton button = new JButton("New button");
+		GridBagConstraints gbc_button = new GridBagConstraints();
+		gbc_button.insets = new Insets(0, 0, 5, 0);
+		gbc_button.gridx = 0;
+		gbc_button.gridy = 1;
+		panel_1.add(button, gbc_button);
+		
+		JButton btnNewButton_1 = new JButton("New button");
+		GridBagConstraints gbc_btnNewButton_1 = new GridBagConstraints();
+		gbc_btnNewButton_1.gridx = 0;
+		gbc_btnNewButton_1.gridy = 2;
+		panel_1.add(btnNewButton_1, gbc_btnNewButton_1);
+		
+	}
+}

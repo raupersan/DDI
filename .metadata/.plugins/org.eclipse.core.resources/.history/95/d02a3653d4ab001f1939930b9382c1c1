@@ -1,0 +1,42 @@
+package ventana;
+
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+
+import java.awt.Font;
+
+import javax.swing.JButton;
+
+public class Dificultad extends JPanel{
+	private JPanel panel;
+	private JTextField campoUser;
+	private JTextField campoContra;
+	
+	public Dificultad() {
+		setBounds(0, 0, 1920, 1080);
+		panel = new JPanel();
+		panel.setBounds(0, 0, 1920, 1080);
+		setLayout(null);
+		add(panel);
+		panel.setLayout(null);
+		
+		JLabel titulo = new JLabel("Elige la dificultad\r\n");
+		titulo.setFont(new Font("Tahoma", Font.PLAIN, 76));
+		titulo.setBounds(714, 107, 831, 206);
+		panel.add(titulo);
+		
+		JButton volver = new JButton("Volver");
+		volver.setBounds(0, 0, 89, 23);
+		panel.add(volver);
+		
+		JButton facil = new JButton("Fácil");
+		facil.setBounds(0, 0, 89, 23);
+		panel.add(facil);
+		
+		JButton dificil = new JButton("Dificil");
+		dificil.setBounds(0, 0, 89, 23);
+		panel.add(dificil);
+	}
+
+}

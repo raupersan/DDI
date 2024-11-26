@@ -20,15 +20,17 @@ import javax.swing.JButton;
 public class Frame extends JPanel {
 	private JFrame frame = new JFrame("Frame");
 	private static CardLayout cl = new CardLayout();
-	private BarraCarga bc;
 	public static JPanel contenedor = new JPanel();
+	private BarraCarga bc;
 	private Login login;
+	private Dificultad dificultad;
 	private JPanel pantallaLogin = new JPanel();
 	private final JButton iniciarSesion = new JButton("Iniciar Sesión");
 
 	public Frame() {
 		bc = new BarraCarga();
 		login = new Login();
+		dificultad = new Dificultad();
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
@@ -39,11 +41,12 @@ public class Frame extends JPanel {
 		contenedor.setLayout(cl);
 		contenedor.add(bc, "barraCarga");
 		contenedor.add(login, "login");
+		contenedor.add(dificultad, "dificultad");
 		cl.show(contenedor, "barraCarga");
 
 	}
 
-	public static void cambiarVentana(String num) {
-		cl.show(contenedor, num);
+	public static void cambiarVentana(String id) {
+		cl.show(contenedor, id);
 	}
 }
