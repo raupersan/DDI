@@ -65,7 +65,7 @@ public class Login extends JPanel {
 		JButton inicio = new JButton("Iniciar sesión\r\n");
 		inicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				comprobarLogin(campoUser.getText(), campoContra.getText(),error);
+				//comprobarLogin(campoUser.getText(), campoContra.getText(),error);
 			}
 		});
 		inicio.setBounds(1639, 935, 188, 55);

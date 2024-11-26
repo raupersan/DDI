@@ -50,7 +50,7 @@ public class BarraCarga extends JPanel {
 				barraCarga.setValue(barraCarga.getValue() + 16);
 				if(barraCarga.getValue() ==60) {
 					//TODO Terminar la lectura de los usuarios en LeerUsuarios
-					//usuarios= (new LeerUsuarios()).users();
+					usuarios= (new LeerUsuarios()).users();
 				}
 				if (barraCarga.getValue() == 100) {
 					((Timer) e.getSource()).stop();

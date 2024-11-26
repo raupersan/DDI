@@ -13,6 +13,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Color;
 import javax.swing.JLabel;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class Juego extends JPanel{
 
@@ -37,95 +39,90 @@ public class Juego extends JPanel{
 		panel_1.setLayout(new GridLayout(0, 10, 0, 0));
 		
 		JButton btnQ = new JButton("Q");
+		btnQ.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyTyped(KeyEvent e) {
+			}
+		});
 		panel_1.add(btnQ);
 		
-		JButton btnNewButton = new JButton("W");
-		btnNewButton.setBackground(Color.CYAN);
-		panel_1.add(btnNewButton);
+		JButton btnW = new JButton("W");
+		btnW.setBackground(Color.CYAN);
+		panel_1.add(btnW);
 		
-	
+		JButton btnE = new JButton("E");
+		panel_1.add(btnE);
 		
-		JButton btnNewButton_1 = new JButton("E");
-		panel_1.add(btnNewButton_1);
+		JButton btnR = new JButton("R");
+		panel_1.add(btnR);
 		
-		JButton btnNewButton_2 = new JButton("R");
-		panel_1.add(btnNewButton_2);
+		JButton btnT = new JButton("T");
+		panel_1.add(btnT);
 		
-		JButton btnNewButton_3 = new JButton("T");
-		panel_1.add(btnNewButton_3);
+		JButton btnY = new JButton("Y");
+		panel_1.add(btnY);
 		
-		JButton btnNewButton_4 = new JButton("Y");
-		panel_1.add(btnNewButton_4);
+		JButton btnU = new JButton("U");
+		panel_1.add(btnU);
 		
-		JButton btnNewButton_5 = new JButton("U");
-		panel_1.add(btnNewButton_5);
+		JButton btnI = new JButton("I");
+		panel_1.add(btnI);
 		
-		JButton btnNewButton_6 = new JButton("I");
-		panel_1.add(btnNewButton_6);
+		JButton btnO = new JButton("O");
+		panel_1.add(btnO);
 		
-		JButton btnNewButton_8 = new JButton("O");
-		panel_1.add(btnNewButton_8);
+		JButton btnP = new JButton("P");
+		panel_1.add(btnP);
 		
-		JButton btnNewButton_7 = new JButton("P");
-		panel_1.add(btnNewButton_7);
+		JButton btnA = new JButton("A");
+		panel_1.add(btnA);
 		
-		JButton btnNewButton_10 = new JButton("A");
-		panel_1.add(btnNewButton_10);
+		JButton btnS = new JButton("S");
+		panel_1.add(btnS);		
 		
-		JButton btnNewButton_11 = new JButton("S");
-		panel_1.add(btnNewButton_11);		
+		JButton btnD = new JButton("D");
+		panel_1.add(btnD);		
 		
-		JButton btnNewButton_13 = new JButton("D");
-		panel_1.add(btnNewButton_13);		
+		JButton btnF = new JButton("F");
+		panel_1.add(btnF);	
 		
-		JButton btnNewButton_14 = new JButton("F");
-		panel_1.add(btnNewButton_14);	
+		JButton btnG = new JButton("G");
+		panel_1.add(btnG);	
 		
-		JButton btnNewButton_15 = new JButton("G");
-		panel_1.add(btnNewButton_15);	
+		JButton btnH = new JButton("H");
+		panel_1.add(btnH);	
 		
-		JButton btnNewButton_16 = new JButton("H");
-		panel_1.add(btnNewButton_16);	
+		JButton btnJ = new JButton("J");
+		panel_1.add(btnJ);	
 		
-		JButton btnNewButton_17 = new JButton("J");
-		panel_1.add(btnNewButton_17);	
+		JButton btnK = new JButton("K");
+		panel_1.add(btnK);
 		
-		JButton btnNewButton_18 = new JButton("K");
-		panel_1.add(btnNewButton_18);
+		JButton btnL = new JButton("L");
+		panel_1.add(btnL);
 		
-		JButton btnNewButton_29 = new JButton("L");
-		panel_1.add(btnNewButton_29);
+		JButton btnNN = new JButton("Ñ");
+		panel_1.add(btnNN);
 		
-		JButton btnNewButton_30 = new JButton("Ñ");
-		panel_1.add(btnNewButton_30);
+		JButton btnZ = new JButton("Z");
+		panel_1.add(btnZ);
 		
-		JButton btnNewButton_12 = new JButton("Z");
-		panel_1.add(btnNewButton_12);
+		JButton btnX = new JButton("X");
+		panel_1.add(btnX);
 		
-		JButton btnNewButton_19 = new JButton("X");
-		panel_1.add(btnNewButton_19);
+		JButton btnC = new JButton("C");
+		panel_1.add(btnC);
 		
-		JButton btnNewButton_20 = new JButton("C");
-		panel_1.add(btnNewButton_20);
+		JButton btnV = new JButton("V");
+		panel_1.add(btnV);
 		
-		JButton btnNewButton_21 = new JButton("V");
-		panel_1.add(btnNewButton_21);
+		JButton btnB = new JButton("B");
+		panel_1.add(btnB);
 		
-		JButton btnNewButton_22 = new JButton("B");
-		panel_1.add(btnNewButton_22);
+		JButton btnN = new JButton("N");
+		panel_1.add(btnN);
 		
-		JButton btnNewButton_23 = new JButton("N");
-		panel_1.add(btnNewButton_23);
-		
-		JButton btnNewButton_24 = new JButton("M");
-		panel_1.add(btnNewButton_24);
-		
-		JButton btnNewButton_27 = new JButton("New button");
-		panel_1.add(btnNewButton_27);
-		
-		
-		
-		
-		
+		JButton btnM = new JButton("M");
+		panel_1.add(btnM);
 	}
 }

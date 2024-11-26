@@ -9,6 +9,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JProgressBar;
 import javax.swing.Timer;
@@ -16,21 +17,39 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.Dimension;
 import javax.swing.JButton;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Frame extends JPanel {
-	private JFrame frame = new JFrame("Frame");
+	private JFrame frame = new JFrame("Mecanografía");
 	private static CardLayout cl = new CardLayout();
 	public static JPanel contenedor = new JPanel();
+	private int salir;
 	private BarraCarga bc;
 	private Login login;
 	private Dificultad dificultad;
-	private JPanel pantallaLogin = new JPanel();
-	private final JButton iniciarSesion = new JButton("Iniciar Sesión");
+	private Juego juego;
 
 	public Frame() {
 		bc = new BarraCarga();
 		login = new Login();
 		dificultad = new Dificultad();
+		juego = new Juego();
+		frame.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				salir = JOptionPane.showConfirmDialog(frame, "¿Estás seguro de querer salir?",
+						JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+
+				// Close the application if the user selects "Yes"
+				if (salir == JOptionPane.YES_OPTION) {
+					frame.dispose();
+				}
+				else {
+					
+				}
+			}
+		});
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
@@ -42,6 +61,7 @@ public class Frame extends JPanel {
 		contenedor.add(bc, "barraCarga");
 		contenedor.add(login, "login");
 		contenedor.add(dificultad, "dificultad");
+		contenedor.add(juego, "juego");
 		cl.show(contenedor, "barraCarga");
 
 	}
