@@ -38,15 +38,19 @@ public class Frame extends JPanel {
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
-				salir = JOptionPane.showConfirmDialog(frame, "¿Estás seguro de querer salir?", "Aviso",
+				salir = JOptionPane.showConfirmDialog(frame, "Are you sure you want to exit?", "Exit Confirmation",
 						JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
 
+				// Close the application if the user selects "Yes"
 				if (salir == JOptionPane.YES_OPTION) {
 					frame.dispose();
 				}
+				else {
+					
+				}
 			}
 		});
-		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
 		frame.setResizable(false);
