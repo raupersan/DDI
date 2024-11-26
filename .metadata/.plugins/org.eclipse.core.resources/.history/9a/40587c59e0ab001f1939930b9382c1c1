@@ -34,7 +34,7 @@ public class Juego extends JPanel{
 		JPanel panel_1 = new JPanel();
 		panel_1.setBounds(0, 615, 1920, 465);
 		add(panel_1);
-		panel_1.setLayout(new GridLayout(0, 10, 0, 0));
+		panel_1.setLayout(new GridLayout(3, 10, 0, 0));
 		
 		JButton btnQ = new JButton("Q");
 		panel_1.add(btnQ);
@@ -69,22 +69,25 @@ public class Juego extends JPanel{
 		JButton btnNewButton_7 = new JButton("P");
 		panel_1.add(btnNewButton_7);
 		
-		JButton btnNewButton_10 = new JButton("A");
+		JButton btnNewButton_9 = new JButton("New button");
+		panel_1.add(btnNewButton_9);
+		
+		JButton btnNewButton_10 = new JButton("New button");
 		panel_1.add(btnNewButton_10);
 		
-		JButton btnNewButton_11 = new JButton("S");
+		JButton btnNewButton_11 = new JButton("New button");
 		panel_1.add(btnNewButton_11);		
 		
-		JButton btnNewButton_13 = new JButton("D");
+		JButton btnNewButton_13 = new JButton("New button");
 		panel_1.add(btnNewButton_13);		
 		
-		JButton btnNewButton_14 = new JButton("F");
+		JButton btnNewButton_14 = new JButton("New button");
 		panel_1.add(btnNewButton_14);	
 		
-		JButton btnNewButton_15 = new JButton("G");
+		JButton btnNewButton_15 = new JButton("New button");
 		panel_1.add(btnNewButton_15);	
 		
-		JButton btnNewButton_16 = new JButton("H");
+		JButton btnNewButton_16 = new JButton("New button");
 		panel_1.add(btnNewButton_16);	
 		
 		JButton btnNewButton_17 = new JButton("New button");
@@ -101,6 +104,15 @@ public class Juego extends JPanel{
 		
 		JButton btnNewButton_12 = new JButton("New button");
 		panel_1.add(btnNewButton_12);
+		
+		JLabel label_1 = new JLabel("");
+		panel_1.add(label_1);
+		
+		JLabel label_2 = new JLabel("");
+		panel_1.add(label_2);
+		
+		JLabel label_3 = new JLabel("");
+		panel_1.add(label_3);
 		
 		JButton btnNewButton_19 = new JButton("New button");
 		panel_1.add(btnNewButton_19);
@@ -128,6 +140,21 @@ public class Juego extends JPanel{
 		
 		JButton btnNewButton_27 = new JButton("New button");
 		panel_1.add(btnNewButton_27);
+		
+		JButton btnNewButton_28 = new JButton("New button");
+		panel_1.add(btnNewButton_28);
+		
+		JLabel label_4 = new JLabel("");
+		panel_1.add(label_4);
+		
+		JLabel label_5 = new JLabel("");
+		panel_1.add(label_5);
+		
+		JLabel label_6 = new JLabel("");
+		panel_1.add(label_6);
+		
+		JLabel label_7 = new JLabel("");
+		panel_1.add(label_7);
 		
 		
 		
