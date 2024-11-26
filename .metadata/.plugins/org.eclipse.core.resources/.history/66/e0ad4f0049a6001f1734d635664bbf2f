@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * 
- */
-module Proyecto_Mecanografia_Raul_Perez {
-	requires java.desktop;
-}

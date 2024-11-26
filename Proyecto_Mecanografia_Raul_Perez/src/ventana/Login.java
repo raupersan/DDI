@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JTextField;
@@ -41,11 +42,13 @@ public class Login extends JPanel {
 		panel.add(usuario);
 
 		campoUser = new JTextField();
+		campoUser.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		campoUser.setBounds(926, 670, 449, 66);
 		panel.add(campoUser);
 		campoUser.setColumns(10);
 
-		campoContra = new JTextField();
+		campoContra = new JPasswordField();
+		campoContra.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		campoContra.setBounds(926, 853, 449, 66);
 		panel.add(campoContra);
 		campoContra.setColumns(10);

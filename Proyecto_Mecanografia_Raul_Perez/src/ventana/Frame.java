@@ -17,11 +17,13 @@ import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.Dimension;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Frame extends JPanel {
-	private JFrame frame = new JFrame("Mecanografía");
+	public JFrame frame = new JFrame("Mecanografía");
 	private static CardLayout cl = new CardLayout();
 	public static JPanel contenedor = new JPanel();
 	private int salir;
