@@ -87,38 +87,44 @@ public class Juego extends JPanel{
 		JButton btnNewButton_16 = new JButton("H");
 		panel_1.add(btnNewButton_16);	
 		
-		JButton btnNewButton_17 = new JButton("J");
+		JButton btnNewButton_17 = new JButton("New button");
 		panel_1.add(btnNewButton_17);	
 		
-		JButton btnNewButton_18 = new JButton("K");
+		JButton btnNewButton_18 = new JButton("New button");
 		panel_1.add(btnNewButton_18);
 		
-		JButton btnNewButton_29 = new JButton("L");
+		JButton btnNewButton_29 = new JButton("New button");
 		panel_1.add(btnNewButton_29);
 		
-		JButton btnNewButton_30 = new JButton("Ñ");
+		JButton btnNewButton_30 = new JButton("New button");
 		panel_1.add(btnNewButton_30);
 		
-		JButton btnNewButton_12 = new JButton("Z");
+		JButton btnNewButton_12 = new JButton("New button");
 		panel_1.add(btnNewButton_12);
 		
-		JButton btnNewButton_19 = new JButton("X");
+		JButton btnNewButton_19 = new JButton("New button");
 		panel_1.add(btnNewButton_19);
 		
-		JButton btnNewButton_20 = new JButton("C");
+		JButton btnNewButton_20 = new JButton("New button");
 		panel_1.add(btnNewButton_20);
 		
-		JButton btnNewButton_21 = new JButton("V");
+		JButton btnNewButton_21 = new JButton("New button");
 		panel_1.add(btnNewButton_21);
 		
-		JButton btnNewButton_22 = new JButton("B");
+		JButton btnNewButton_22 = new JButton("New button");
 		panel_1.add(btnNewButton_22);
 		
-		JButton btnNewButton_23 = new JButton("N");
+		JButton btnNewButton_23 = new JButton("New button");
 		panel_1.add(btnNewButton_23);
 		
-		JButton btnNewButton_24 = new JButton("M");
+		JButton btnNewButton_24 = new JButton("New button");
 		panel_1.add(btnNewButton_24);
+		
+		JButton btnNewButton_25 = new JButton("New button");
+		panel_1.add(btnNewButton_25);
+		
+		JButton btnNewButton_26 = new JButton("New button");
+		panel_1.add(btnNewButton_26);
 		
 		JButton btnNewButton_27 = new JButton("New button");
 		panel_1.add(btnNewButton_27);
