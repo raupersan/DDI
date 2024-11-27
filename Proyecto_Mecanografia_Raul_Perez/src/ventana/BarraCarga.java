@@ -65,7 +65,8 @@ public class BarraCarga extends JPanel {
 			public void actionPerformed(ActionEvent e) {
 				barraCarga.setValue(barraCarga.getValue() + 16);
 				if(barraCarga.getValue() >=60) {
-					if(!(new ComprobarArchivos()).comprobar()) {
+					//la segunda parte está puesta porque comprobarArchivos no está terminado, se eliminará cuando se termine
+					if(!(new ComprobarArchivos()).comprobar()&&1==2) {
 						((Timer) e.getSource()).stop();
 						SwingUtilities.invokeLater(() -> {
 		                    error.setVisible(true); // Asegura que se ejecute en el EDT
