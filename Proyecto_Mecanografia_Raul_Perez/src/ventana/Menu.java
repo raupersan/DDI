@@ -31,7 +31,7 @@ public class Menu extends JPanel {
 		JButton facil = new JButton("Fácil");
 		facil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO cargar archivo dificil
+				Frame.cambiarVentana("juego");
 			}
 		});
 		facil.setBounds(856, 397, 188, 55);
@@ -41,8 +41,8 @@ public class Menu extends JPanel {
 		JButton dificil = new JButton("Dificil");
 		dificil.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				// TODO cargar archivo dificil
-			}
+				Frame.cambiarVentana("juego");
+				}
 		});
 		dificil.setBounds(856, 502, 188, 55);
 		;
@@ -61,6 +61,7 @@ public class Menu extends JPanel {
 		JButton stats = new JButton("Ver estadísticas");
 		stats.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Frame.cambiarVentana("juego");
 			}
 		});
 		stats.setBounds(856, 604, 188, 55);

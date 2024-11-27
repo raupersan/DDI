@@ -13,6 +13,9 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Color;
 import javax.swing.JLabel;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 
@@ -42,6 +45,7 @@ public class Juego extends JPanel{
 		gbl_panel_1.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		gbl_panel_1.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
 		panel_1.setLayout(gbl_panel_1);
+		
 		
 		JButton btnQ = new JButton("Q");
 		btnQ.addKeyListener(new KeyAdapter() {
@@ -320,5 +324,26 @@ public class Juego extends JPanel{
 		gbc_espacio.gridx = 3;
 		gbc_espacio.gridy = 3;
 		panel_1.add(espacio, gbc_espacio);
+		
+		JLabel label = new JLabel("");
+		GridBagConstraints gbc_label = new GridBagConstraints();
+		gbc_label.insets = new Insets(0, 0, 0, 5);
+		gbc_label.gridx = 6;
+		gbc_label.gridy = 3;
+		panel_1.add(label, gbc_label);
+		
+		JLabel label2 = new JLabel("");
+		GridBagConstraints gbc_label1 = new GridBagConstraints();
+		gbc_label1.insets = new Insets(0, 0, 0, 5);
+		gbc_label1.gridx = 7;
+		gbc_label1.gridy = 3;
+		panel_1.add(label2, gbc_label1);
+		
+		JLabel lblNewLabel_6 = new JLabel("");
+		GridBagConstraints gbc_lblNewLabel_6 = new GridBagConstraints();
+		gbc_lblNewLabel_6.insets = new Insets(0, 0, 0, 5);
+		gbc_lblNewLabel_6.gridx = 8;
+		gbc_lblNewLabel_6.gridy = 3;
+		panel_1.add(lblNewLabel_6, gbc_lblNewLabel_6);
 	}
 }
