@@ -69,6 +69,7 @@ public class Login extends JPanel {
 		inicio.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//comprobarLogin(campoUser.getText(), campoContra.getText(),error);
+				Frame.cambiarVentana("menu");
 			}
 		});
 		inicio.setBounds(1639, 935, 188, 55);

@@ -29,13 +29,13 @@ public class Frame extends JPanel {
 	private int salir;
 	private BarraCarga bc;
 	private Login login;
-	private Dificultad dificultad;
+	private Menu dificultad;
 	private Juego juego;
 
 	public Frame() {
 		bc = new BarraCarga();
 		login = new Login();
-		dificultad = new Dificultad();
+		dificultad = new Menu();
 		juego = new Juego();
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
@@ -58,7 +58,7 @@ public class Frame extends JPanel {
 		contenedor.setLayout(cl);
 		contenedor.add(bc, "barraCarga");
 		contenedor.add(login, "login");
-		contenedor.add(dificultad, "dificultad");
+		contenedor.add(dificultad, "menu");
 		contenedor.add(juego, "juego");
 		cl.show(contenedor, "barraCarga");
 

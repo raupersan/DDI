@@ -10,12 +10,12 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Dificultad extends JPanel {
+public class Menu extends JPanel {
 	private JPanel panel;
 	private JTextField campoUser;
 	private JTextField campoContra;
 
-	public Dificultad() {
+	public Menu() {
 		setBounds(0, 0, 1920, 1080);
 		panel = new JPanel();
 		panel.setBounds(0, 0, 1920, 1080);
@@ -23,9 +23,9 @@ public class Dificultad extends JPanel {
 		add(panel);
 		panel.setLayout(null);
 
-		JLabel titulo = new JLabel("Elige la dificultad\r\n");
+		JLabel titulo = new JLabel("Menu");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 76));
-		titulo.setBounds(714, 107, 831, 206);
+		titulo.setBounds(856, 11, 283, 206);
 		panel.add(titulo);
 
 		JButton facil = new JButton("Fácil");
@@ -34,7 +34,7 @@ public class Dificultad extends JPanel {
 				// TODO cargar archivo dificil
 			}
 		});
-		facil.setBounds(312, 616, 188, 55);
+		facil.setBounds(856, 397, 188, 55);
 		;
 		panel.add(facil);
 
@@ -44,7 +44,7 @@ public class Dificultad extends JPanel {
 				// TODO cargar archivo dificil
 			}
 		});
-		dificil.setBounds(1366, 616, 188, 55);
+		dificil.setBounds(856, 502, 188, 55);
 		;
 		panel.add(dificil);
 
@@ -57,7 +57,14 @@ public class Dificultad extends JPanel {
 
 		volver.setBounds(1696, 953, 114, 47);
 		panel.add(volver);
+		
+		JButton stats = new JButton("Ver estadísticas");
+		stats.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		stats.setBounds(856, 604, 188, 55);
+		panel.add(stats);
 
 	}
-
 }
