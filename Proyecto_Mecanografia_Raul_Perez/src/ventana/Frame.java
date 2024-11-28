@@ -52,6 +52,7 @@ public class Frame extends JPanel {
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
 		frame.setResizable(false);
+		frame.setFocusable(true);
 		frame.pack();
 		frame.setVisible(true);
 		frame.getContentPane().add(contenedor);
@@ -60,7 +61,7 @@ public class Frame extends JPanel {
 		contenedor.add(login, "login");
 		contenedor.add(dificultad, "menu");
 		contenedor.add(juego, "juego");
-		cl.show(contenedor, "barraCarga");
+		cl.show(contenedor, "juego");
 
 	}
 
