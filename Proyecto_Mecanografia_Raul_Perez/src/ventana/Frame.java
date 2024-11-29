@@ -32,7 +32,8 @@ public class Frame extends JPanel {
 	 * 			@param bc 					Objeto Barra de carga, tendrá todo lo relacionado con este panel
 	 * 			@param login				Objeto Login, tendrá todo lo relacionado con el inicio de sesión del usuario
 	 * 			@param Menu					Objeto Menu, donde  el usuario eligirá la dificultad, ver sus estadísticas etc
-	 * 			@param juego
+	 * 			@param juego				Objeto juego, se encarga de la gestión del juego, de reconocer los parámetros 
+	 * 										del teclado, de leer el texto, contar errores...
 	 * 
 	 */
 	public JFrame frame = new JFrame("Mecanografía");			
@@ -53,6 +54,10 @@ public class Frame extends JPanel {
 		menu = new Menu();
 		juego = new Juego();
 		
+		/**
+		 * Este evento nos permite añadir una ventana de aviso cuando el usuario intente cerrar la aplicación
+		 * 
+		 */
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -64,7 +69,15 @@ public class Frame extends JPanel {
 				}
 			}
 		});
+		/**
+		 * DO_NOTHING_ON_CLOSE sirve para que la propia ventana de confirmación se cierre si el usuario clicka "no"
+		 */
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+		/**
+		 * 		@param screenSize 				Obtenemos el tamaño de la pantalla y hacemos que el tamaño mínimo del frame
+		 * 										sea este y que no se pueda redimensionar, de manera que el programa siempre 
+		 * 										estará a pantalla completa
+		 */
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		frame.setMinimumSize(screenSize);
 		frame.setResizable(false);
@@ -72,15 +85,19 @@ public class Frame extends JPanel {
 		frame.pack();
 		frame.setVisible(true);
 		frame.getContentPane().add(contenedor);
-		contenedor.setLayout(cl);
-		contenedor.add(bc, "barraCarga");
+		contenedor.setLayout(cl); 			//asociamos el card layout al contenedor
+		contenedor.add(bc, "barraCarga");	//añadimos cada panel al contenedor
 		contenedor.add(login, "login");
 		contenedor.add(menu, "menu");
 		contenedor.add(juego, "juego");
-		cl.show(contenedor, "barraCarga");
+		cl.show(contenedor, "barraCarga");	//empezamos mostrando la barra de carga
 
 	}
-
+	/**
+	 * 
+	 * @fun cambiarVentana			funcion a la que llamaremos desde todos los paneles para pasar al siguiente, 
+	 * 								recibiendo como parámetro el identificador del próximo panel
+	 */
 	public static void cambiarVentana(String id) {
 		cl.show(contenedor, id);
 	}
