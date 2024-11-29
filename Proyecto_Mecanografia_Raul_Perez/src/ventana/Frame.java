@@ -23,20 +23,36 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 public class Frame extends JPanel {
-	public JFrame frame = new JFrame("Mecanografía");
+	/**
+	 * 			@param frame				Crea un Jframe sobre el que montaremos la aplicación con el título Mecanografía
+	 * 			@param cl 					Crea uun CardLayout, que es el mecanismo que emplearemos para pasar de una
+	 * 										ventana a otra
+	 * 			@param contenedor			JPanel que tendrá el CardLayout, su función será contener al resto de paneles
+	 * 			@param salir				Variable auxiliar con la que saldremos de la aplicación más adelante
+	 * 			@param bc 					Objeto Barra de carga, tendrá todo lo relacionado con este panel
+	 * 			@param login				Objeto Login, tendrá todo lo relacionado con el inicio de sesión del usuario
+	 * 			@param Menu					Objeto Menu, donde  el usuario eligirá la dificultad, ver sus estadísticas etc
+	 * 			@param juego
+	 * 
+	 */
+	public JFrame frame = new JFrame("Mecanografía");			
 	private static CardLayout cl = new CardLayout();
 	public static JPanel contenedor = new JPanel();
 	private int salir;
 	private BarraCarga bc;
 	private Login login;
-	private Menu dificultad;
+	private Menu menu;
 	private Juego juego;
 
 	public Frame() {
+		/**
+		 * Iniciamos estancias de cada clase panel
+		 */
 		bc = new BarraCarga();
 		login = new Login();
-		dificultad = new Menu();
+		menu = new Menu();
 		juego = new Juego();
+		
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
 			public void windowClosing(WindowEvent e) {
@@ -59,9 +75,9 @@ public class Frame extends JPanel {
 		contenedor.setLayout(cl);
 		contenedor.add(bc, "barraCarga");
 		contenedor.add(login, "login");
-		contenedor.add(dificultad, "menu");
+		contenedor.add(menu, "menu");
 		contenedor.add(juego, "juego");
-		cl.show(contenedor, "juego");
+		cl.show(contenedor, "barraCarga");
 
 	}
 
