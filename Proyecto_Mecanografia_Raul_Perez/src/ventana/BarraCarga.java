@@ -33,11 +33,19 @@ public class BarraCarga extends JPanel {
 	Popup popup;
 	public BarraCarga() {
 		setBounds(0,0,1920,1080);
-		panel = new JPanel();
+		panel = new JPanel();//creamos un nuevo panel
 		panel.setBounds(0, 0, 1920, 1080);
 		setLayout(null);
-		add(panel);
+		add(panel);//añadimos este panel al panel contenedor
 		panel.setLayout(null);
+		/**
+		 * @param barraCarga								Barra de carga que asociaremos a un Timer para su progreso
+		 * @param titulo									Etiqueta con el título del panel
+		 * @param error										Etiqueta que muestra un mensaje de error. No estará visible 
+		 * 													por defecto, se mostrará cuando haya un error al cargar 
+		 * 													los ficheros										
+		 */
+		
 		
 		JProgressBar barraCarga = new JProgressBar();
 		barraCarga.setBounds(725, 942, 437, 66);
@@ -46,7 +54,7 @@ public class BarraCarga extends JPanel {
 		barraCarga.setAlignmentY(1.0f);
 		//TODO imagen de fondo
 		panel.add(barraCarga);
-		
+	
 		JLabel titulo = new JLabel("MECANOGRAFIA");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 50));
 		titulo.setBounds(753, 162, 504, 335);
@@ -59,7 +67,14 @@ public class BarraCarga extends JPanel {
 		error.setBounds(533, 399, 1070, 140);
 		panel.add(error);
 		
-
+/*
+ * @param Timer											Timer que empezará nada más arranca el programa, tardando unos 6
+ * 														segundos en completarse. En caso de que que hubiera algún problema
+ * 														cargando los ficheros, el timer pararía y abortaría el programa 
+ * 														2 segundos después
+ * 
+ * 
+ */
 		new Timer(1000, new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
