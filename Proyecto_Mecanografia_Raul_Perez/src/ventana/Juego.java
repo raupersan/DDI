@@ -27,11 +27,11 @@ public class Juego extends JPanel implements KeyListener {
 	ArrayList<JButton> teclas = new ArrayList<JButton>();
 	public Juego() {
 		setBounds(0, 0, 1920, 1080);
-		panel = new JPanel();
+		panel = new JPanel();//creamos un nuevo panel
 		panel.setBackground(Color.RED);
 		panel.setBounds(0, 0, 1920, 615);
 		setLayout(null);
-		add(panel);
+		add(panel);//añadimos este panel al panel contenedor
 		panel.setLayout(null);
 
 		JTextPane textPane = new JTextPane();

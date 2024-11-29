@@ -32,10 +32,15 @@ public class Login extends JPanel {
 		panel.setLayout(null);
 		/**
 		 * @param titulo									Etiqueta con el título del panel
-		 * @param titulo									
-		 * @param error										Etiqueta que muestra un mensaje de error. No estará visible 
-		 * 													por defecto, se mostrará cuando haya un error al cargar 
-		 * 													los ficheros										
+		 * @param usuario									Etiqueta para inducar al usuario donde poner su usuario
+		 * @param campoUser									Campo que recoge el nombre de usuario 
+		 * @param contrasena 								Etiqueta que indica al usuario donde poner la contraseña
+		 * @param campoContra								Campo que recoge la contraseña y muestra pntos por pantalla
+		 * @param error										Etiqueta que muestra que estará invisible por defecto y se
+		 * 													mostrará cuando el usuario o contraseña no coinciden con 
+		 * 													ninguna de los usuarios cargados en el fichero	
+		 * @param inicio									Botón que permitirá avanzar a la siguiente pantalla si 
+		 * 													el nombre y contraseña son correctos									
 		 */
 		
 		JLabel titulo = new JLabel("Inicio de sesión");
@@ -86,6 +91,9 @@ public class Login extends JPanel {
 	}
 
 	private void comprobarLogin(String user, String pwd, JLabel error) {
+		/**
+		 * Comprueba que el usuario es correcto y avanza a la siguiente ventana
+		 */
 		boolean correcto = false;
 		ArrayList<Usuario> users = (new LeerUsuarios()).users();
 		do {
@@ -93,7 +101,7 @@ public class Login extends JPanel {
 				if (u.getNombre().equals(user)&&u.getContrasena().equals(pwd)) {
 					correcto=true;
 					error.setVisible(false);
-					Frame.cambiarVentana("dificultad");
+					Frame.cambiarVentana("menu");
 				}
 				else {
 					error.setVisible(true);
