@@ -25,12 +25,19 @@ public class Login extends JPanel {
 
 	public Login() {
 		setBounds(0, 0, 1920, 1080);
-		panel = new JPanel();
+		panel = new JPanel();//creamos un nuevo panel
 		panel.setBounds(0, 0, 1920, 1080);
 		setLayout(null);
-		add(panel);
+		add(panel);//añadimos este panel al panel contenedor
 		panel.setLayout(null);
-
+		/**
+		 * @param titulo									Etiqueta con el título del panel
+		 * @param titulo									
+		 * @param error										Etiqueta que muestra un mensaje de error. No estará visible 
+		 * 													por defecto, se mostrará cuando haya un error al cargar 
+		 * 													los ficheros										
+		 */
+		
 		JLabel titulo = new JLabel("Inicio de sesión");
 		titulo.setFont(new Font("Tahoma", Font.PLAIN, 76));
 		titulo.setBounds(714, 107, 831, 206);
